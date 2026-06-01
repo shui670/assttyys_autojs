@@ -1443,7 +1443,7 @@ export class Func609 implements IFuncOrigin {
 			]
 		],
 		oper: [
-			[center, 1280, 720, 562, 574, 722, 617, 3000], // 点击开始游戏
+			[center, 1280, 720, 562, 574, 722, 617, 5000], // 点击开始游戏
 		],
 	}, { // 101 庭院未打开菜单
 		desc: '页面是否为庭院_菜单未展开_只支持默认庭院皮肤与默认装饰',
@@ -1942,7 +1942,7 @@ export class Func609 implements IFuncOrigin {
 					name: '一键代办',
 					operator: [thisOperator[36], thisOperator[67], thisOperator[37], thisOperator[38], thisOperator[39]
 						, thisOperator[40], thisOperator[41], thisOperator[42]
-						, thisOperator[32], thisOperator[34], thisOperator[54]
+						, thisOperator[32], thisOperator[54]
 						, thisOperator[55], thisOperator[56], thisOperator[58]]
 				})) {
 					return true;
@@ -2252,7 +2252,7 @@ export class Func609 implements IFuncOrigin {
 		if (thisScript.oper({
 			id: 609,
 			name: '关闭',
-			operator: [thisOperator[35], thisOperator[43], thisOperator[66], thisOperator[72], thisOperator[86]
+			operator: [thisOperator[34], thisOperator[35], thisOperator[43], thisOperator[66], thisOperator[72], thisOperator[86]
 				, thisOperator[93], thisOperator[96], thisOperator[97]]
 		})) {
 			return true

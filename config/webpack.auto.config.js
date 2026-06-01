@@ -85,11 +85,6 @@ module.exports = (env, argv) => {
             }),
             compilePlugin,
             new ProgressPlugin(),
-            new CopyWebpackPlugin({
-                patterns: [
-                    { from: path.resolve(__dirname, '../node_modules/assttyys_ui/dist/index.html'), to: '.' },
-                ]
-            }),
             new Unpack(),
             new DevServer(),
         ]
