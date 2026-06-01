@@ -4,11 +4,13 @@ const staticProxys = [
     'project.json',
 ];
 
+const path = require('path');
 const Koa = require('koa')
 const Router = require('koa-router');
 const compress = require('koa-compress');
 const fsPromise = require('fs').promises;
 
+const rootDir = path.join(__dirname, '..');
 const app = new Koa();
 const router = new Router();
 
@@ -26,11 +28,11 @@ const router = new Router();
     for (let item of staticProxys) {
         fileList = [...fileList, ...(await listAll(item)).map(item => `/${item}`)];
     }
-    fileList.forEach(path => {
-        router.all(path, async (ctx) => {
+    fileList.forEach(routePath => {
+        router.all(routePath, async (ctx) => {
             const now = new Date();
-            console.log(`[${now.toLocaleDateString()} ${now.toLocaleTimeString()}] load: ${path}`);
-            ctx.body = await fsPromise.readFile(__dirname + '/..' + path);
+            console.log(`[${now.toLocaleDateString()} ${now.toLocaleTimeString()}] load: ${routePath}`);
+            ctx.body = await fsPromise.readFile(path.join(rootDir, routePath.slice(1)));
         });
     });
 
@@ -56,29 +58,29 @@ const router = new Router();
 
 async function listAll(src) {
     const res = [];
-    await listAllInner(src);
+    await listAllInner(path.join(rootDir, src));
     return res;
 
-    async function listAllInner(src) {
-        if (src.endsWith('.')) {
+    async function listAllInner(fullPath) {
+        if (fullPath.endsWith('.')) {
             return;
         }
         var isSrcExists = false;
         try {
-            await fsPromise.access(src);
+            await fsPromise.access(fullPath);
             isSrcExists = true;
         } catch (e) {
             isSrcExists = false;
         }
 
         if (isSrcExists) {
-            if ((await fsPromise.stat(src)).isDirectory()) { // 复制目录
-                var files = await fsPromise.readdir(src);
+            if ((await fsPromise.stat(fullPath)).isDirectory()) { // 复制目录
+                var files = await fsPromise.readdir(fullPath);
                 for (let file of files) {
-                    await listAllInner(src + '/' + file);
+                    await listAllInner(path.join(fullPath, file));
                 }
             } else { // 复制文件
-                res.push(src);
+                res.push(path.relative(rootDir, fullPath).split(path.sep).join('/'));
             }
         }
     }
