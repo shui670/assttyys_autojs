@@ -153,10 +153,13 @@ export class helperBridge implements IhelperBridge {
 			} else {
 				console.log(`传入坐标信息为(${JSON.stringify(item)}), 不执行操作`);
 			}
-
-			// sleep(item[4] + random(baseSleep || 0, randomSleep || 0));
+			if (Math.random() < 0.03) {
+				baseSleep += 800;
+			}
 			const sleepRegion: [number, number] = [item[4] + (baseSleep || 0), item[4] + (baseSleep || 0) + (randomSleep || 0)];
-			sleep(getNormalRandom(sleepRegion, strHashToNum(device.getAndroidId(), sleepRegion[0], sleepRegion[1])))
+			const centerSleep = (sleepRegion[0] + sleepRegion[1]) / 2 + script.randomclick[0] * 10;
+
+			sleep(getNormalRandom(sleepRegion, centerSleep));
 		});
 	}
 
