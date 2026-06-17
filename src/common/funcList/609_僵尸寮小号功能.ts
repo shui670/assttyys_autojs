@@ -1595,15 +1595,6 @@ export class Func609 implements IFuncOrigin {
 		})) {
 			return true
 		}
-		if (thisScript.oper({
-			id: 609,
-			name: '一键代办',
-			operator: [thisOperator[63]]
-		})) {
-			thisScript.myToast('已达到一键代办');
-			thisScript.global.function_Switch.agency = false;
-			return true;
-		}
 		if (thisScript.global.account_state === 'login') {
 			// 使用 valid_account_num 判断实际完成功能的账号数
 			if (thisScript.global.valid_account_num >= (thisconf.account_count as number)) {
@@ -1764,6 +1755,42 @@ export class Func609 implements IFuncOrigin {
 					return true;
 				}
 			}
+			if (thisScript.global.function_Switch.agency) {
+				let curCnt = 0;
+				const maxCount = 2;
+				while (thisScript.oper({
+					id: 609,
+					name: '一键代办',
+					operator: [thisOperator[33]]
+				})) {
+					curCnt++;
+					if (curCnt >= maxCount) {
+						thisScript.myToast('已达到一键代办');
+						thisScript.global.function_Switch.agency = false;
+						return true;
+					}
+					sleep(1000);
+					thisScript.keepScreen(false);
+				}
+				if (thisScript.oper({
+					id: 609,
+					name: '一键代办',
+					operator: [thisOperator[63]]
+				})) {
+					thisScript.myToast('已达到一键代办');
+					thisScript.global.function_Switch.agency = false;
+					return true;
+				}
+				if (thisScript.oper({
+					id: 609,
+					name: '一键代办',
+					operator: [thisOperator[36], thisOperator[67], thisOperator[37], thisOperator[38], thisOperator[39]
+						, thisOperator[40], thisOperator[41], thisOperator[42]
+						, thisOperator[54], thisOperator[32], thisOperator[56], thisOperator[58]]
+				})) {
+					return true;
+				}
+			}
 			if (thisScript.global.function_Switch.liaoSanshi) {
 				if (thisScript.global.function_Switch.liaoSanshi_tongXinDui_check) {
 					if (thisScript.oper({
@@ -1918,34 +1945,6 @@ export class Func609 implements IFuncOrigin {
 						thisScript.global.function_Switch.liaoSanshi = false;
 						return true;
 					}
-				}
-			}
-			if (thisScript.global.function_Switch.agency) {
-				let curCnt = 0;
-				const maxCount = 2;
-				while (thisScript.oper({
-					id: 609,
-					name: '一键代办',
-					operator: [thisOperator[33]]
-				})) {
-					curCnt++;
-					thisScript.keepScreen(false);
-					if (curCnt >= maxCount) {
-						thisScript.myToast('已达到一键代办');
-						thisScript.global.function_Switch.agency = false;
-						return true;
-					}
-					sleep(1000);
-				}
-				if (thisScript.oper({
-					id: 609,
-					name: '一键代办',
-					operator: [thisOperator[36], thisOperator[67], thisOperator[37], thisOperator[38], thisOperator[39]
-						, thisOperator[40], thisOperator[41], thisOperator[42]
-						, thisOperator[32], thisOperator[54]
-						, thisOperator[55], thisOperator[56], thisOperator[58]]
-				})) {
-					return true;
 				}
 			}
 			if (thisScript.global.function_Switch.regionBoos) {
@@ -2246,13 +2245,14 @@ export class Func609 implements IFuncOrigin {
 				thisScript.global.function_Switch = null;
 				thisScript.global.account_state = 'login';
 				thisScript.runTimes['2'] = 0;
+				thisScript.global.back_time = 0;
 				return true;
 			}
 		}
 		if (thisScript.oper({
 			id: 609,
 			name: '关闭',
-			operator: [thisOperator[34], thisOperator[35], thisOperator[43], thisOperator[66], thisOperator[72], thisOperator[86]
+			operator: [thisOperator[34], thisOperator[35], thisOperator[41], thisOperator[43], thisOperator[66], thisOperator[72], thisOperator[86]
 				, thisOperator[93], thisOperator[96], thisOperator[97]]
 		})) {
 			return true

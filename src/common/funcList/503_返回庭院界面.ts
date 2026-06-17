@@ -832,6 +832,7 @@ export class Func503 implements IFuncOrigin {
 		const thisConf = thisScript.scheme.config['503'];
 		// 增加全局开关
 		if (thisScript.global.back_time > 10) {
+			thisScript.myToast('返回庭院次数过多,强行停止');
 			thisScript.doPush(thisScript, { text: '返回庭院次数过多,强行停止', before() { thisScript.myToast('脚本即将停止，正在上传数据'); } });
 			sleep(2000);
 			thisScript.stop();

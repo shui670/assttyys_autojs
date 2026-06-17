@@ -2,6 +2,7 @@ import { getWidthPixels, getHeightPixels } from '@auto.pro/core';
 import drawFloaty from '@/system/drawFloaty';
 import { getNormalRandom, getRegionBiasRnd2, hash, strHashToNum } from '@/common/toolAuto';
 import { IMyAutomator } from '@/system/MyAutomator';
+import script from '@/system/script';
 
 // const normal = -1; //定义常量
 // const left = 0;
@@ -108,9 +109,33 @@ export class helperBridge implements IhelperBridge {
 		const self = this;
 		transedOper.forEach(item => {
 			if (item[0] >= 0) {
-				// let x = random(item[0], item[2]);
-				// let y = random(item[1], item[3]);
-				const [x, y] = getRegionBiasRnd2(item, [strHashToNum(device.getAndroidId(), item[0], item[2]), strHashToNum(device.getAndroidId(), item[1], item[3])], 1);
+				let centerX = (item[0] + item[2]) / 2;
+				let centerY = (item[1] + item[3]) / 2;
+				if (centerY < script.device.height / 2) {
+					// 上半
+					if (centerX < script.device.width / 3) {
+						//左
+						centerX += script.randomclick[0]
+					} else if (centerX < script.device.width * 2 / 3) {
+						//中
+						centerX += script.randomclick[1]
+					} else {
+						//右
+						centerX += script.randomclick[2]
+					}
+				} else {
+					if (centerX < script.device.width / 3) {
+						//左
+						centerX += script.randomclick[3]
+					} else if (centerX < script.device.width * 2 / 3) {
+						//中
+						centerX += script.randomclick[4]
+					} else {
+						//右
+						centerX += script.randomclick[5]
+					}
+				}
+				const [x, y] = getRegionBiasRnd2(item, [centerX, centerY], 1);
 				const pressTimeout = item[5] ? random(item[5], item[5] + 50) : random(10, 60);
 				console.log(`执行点击操作 === x坐标:${Math.trunc(x)}, y坐标:${Math.trunc(y)}, oper为[${transedOper[0][0]}, ${transedOper[0][1]}, ${transedOper[0][2]}, ${transedOper[0][3]}, ${transedOper[0][4]}]`);
 				if (drawFloaty.instacne) {

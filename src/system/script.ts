@@ -49,6 +49,7 @@ export class Script {
 	schedule: typeof schedule;
 	ncnnBgyx = ncnnBgyx;
 	isPause: boolean;
+	randomclick: number[];
 
 	/**
 	 * 运行次数，下标为funcList中的id，值为这个func成功执行的次数；
@@ -577,6 +578,9 @@ export class Script {
 				this.job.doDone();
 			}
 			return;
+		}
+		for (let i = 0; i < 6; i++) {
+			this.randomclick[i] = Math.floor(Math.random() * 11) - 5;
 		}
 		// test start
 		// let img = images.captureScreen();

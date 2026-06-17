@@ -83,81 +83,81 @@ export class Func691 implements IFuncOrigin {
 	}, { // 3 对话框
 		desc: [1280, 720,
 			[
-				[center, 430, 543, 0x6b0707],
-				[center, 444, 541, 0x820707],
-				[center, 457, 542, 0x7f0607],
-				[center, 353, 543, 0x370b0b],
+				[center, 350, 599, 0x9a7f84],
+				[center, 350, 603, 0x8d716f],
+				[right, 909, 600, 0x8c765d],
+				[right, 909, 603, 0x866d5b],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 855, 245, 896, 281, 200],
+			[center, 1280, 720, 836, 236, 875, 275, 400],
 		]
 	}, { // 4 小白说明
 		desc: [1280, 720,
 			[
-				[right, 714, 301, 0xffffff],
-				[right, 893, 252, 0xf7f4e8],
-				[right, 951, 400, 0xf5efe3],
-				[right, 965, 494, 0xb29ba5],
-				[right, 871, 438, 0xfbc36b],
-				[right, 933, 574, 0x937788],
+				[left, 184, 119, 0xffebb6],
+				[left, 184, 181, 0xffebb6],
+				[left, 181, 217, 0xffebb6],
+				[left, 156, 240, 0xffebb6],
+				[left, 213, 273, 0xffebb6],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 573, 526, 704, 608, 1000],
+			[center, 1280, 720, 377, 553, 527, 641, 1000],
 		]
 	}, { // 5 神乐说明
 		desc: [1280, 720,
 			[
-				[right, 706, 192, 0xffffff],
-				[right, 747, 302, 0xffffff],
-				[right, 861, 276, 0xcfc4b9],
-				[right, 918, 316, 0xebe3da],
-				[right, 1022, 550, 0xfddfd1],
-				[right, 947, 421, 0xcf2850],
+				[left, 164, 115, 0xffebb6],
+				[left, 160, 187, 0xffebb6],
+				[left, 182, 222, 0xffebb6],
+				[left, 187, 248, 0xffebb6],
+				[left, 186, 292, 0xffebb6],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 659, 514, 783, 586, 1000],
+			[center, 1280, 720, 355, 550, 477, 665, 1000],
 		]
-	}, { // 6 犬神红手指
+	}, { // 6 跳过剧情确认
 		desc: [1280, 720,
 			[
-				[right, 887, 255, 0xeca9a1],
-				[right, 897, 273, 0xedb9a9],
-				[right, 907, 287, 0xf0d0b9],
-				[right, 926, 303, 0x8c1b29],
-				[right, 940, 322, 0x9d1e2b],
+				[center, 422, 192, 0x8c4d21],
+				[right, 915, 191, 0x8c4d23],
+				[right, 908, 524, 0x8c4d23],
+				[center, 390, 522, 0x905125],
+				[center, 454, 464, 0xf2d9ad],
+				[right, 714, 460, 0xefd3aa],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 854, 247, 897, 276, 1000],
+			[center, 1280, 720, 712, 446, 841, 474, 1000],
 		]
-	}, { // 7 蓝色跳过
+
+	}, { // 7 跳过
 		desc: [1280, 720,
 			[
-				[right, 844, 535, 0x664bdf],
-				[right, 845, 541, 0x5539de],
-				[right, 845, 550, 0x5c4ee0],
-				[right, 871, 553, 0x2932c1],
-				[right, 903, 540, 0x2345b3],
+				[right, 859, 567, 0xc1b4a1],
+				[right, 861, 573, 0xd4c8b4],
+				[right, 886, 567, 0xeadec9],
+				[right, 887, 580, 0xf4e8d3],
+				[right, 876, 574, 0xc7baa7],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 847, 528, 904, 551, 700],
+			[center, 1280, 720, 848, 559, 890, 584, 1000],
 		]
 	}, { // 8 犬神说明
 		desc: [1280, 720,
 			[
-				[right, 672, 189, 0xffffff],
-				[right, 764, 310, 0xffffff],
-				[right, 895, 485, 0x435385],
-				[right, 1006, 490, 0x52629f],
-				[right, 1000, 432, 0xe5ce7a],
+				[left, 177, 116, 0xffebb6],
+				[left, 157, 176, 0xffebb6],
+				[left, 213, 184, 0xffebb6],
+				[left, 167, 242, 0xffebb6],
+				[left, 203, 282, 0xffebb6],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 610, 546, 760, 587, 1000],
+			[center, 1280, 720, 397, 586, 534, 667, 1000],
 		]
 	}, { // 9 晴明普攻
 		desc: [1280, 720,
@@ -216,17 +216,18 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 415, 299, 450, 329, 1000],
 		]
-	}, { // 13 加速
+	}, { // 13 跳过剧情
 		desc: [1280, 720,
 			[
-				[right, 1036, 52, 0xd7b089],
-				[right, 1055, 52, 0xdab38c],
-				[right, 1154, 59, 0xcfa680],
-				[right, 1175, 59, 0xd1aa83],
+				[right, 1106, 59, 0xd3ad86],
+				[right, 1127, 59, 0xd6aa84],
+				[right, 1204, 60, 0xd3ad83],
+				[right, 1227, 48, 0xe7be94],
+				[right, 1227, 69, 0xd8ae8a],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 1140, 36, 1187, 80, 1000],
+			[center, 1280, 720, 1193, 38, 1237, 76, 1000],
 		]
 	}, { // 14 神乐三点对话 // 废弃
 		desc: [1280, 720,
@@ -841,6 +842,7 @@ export class Func691 implements IFuncOrigin {
 			[center, 1280, 720, 616, 191, 644, 219, 100], // 鬼青左右中
 			[center, 1280, 720, 823, 174, 849, 199, 100],
 			[center, 1280, 720, 941, 262, 966, 287, 100],
+			[center, 1280, 720, 652, 278, 679, 300, 1000],
 		]
 	}, { // 63 犬神三技能
 		desc: [1280, 720,
@@ -901,15 +903,16 @@ export class Func691 implements IFuncOrigin {
 	}, { // 67 鬼使白
 		desc: [1280, 720,
 			[
-				[center, 625, 238, 0xdccccf],
-				[center, 638, 238, 0xdacece],
-				[right, 651, 238, 0xe7d7c6],
-				[center, 389, 57, 0xfbd3a1],
-				[right, 1223, 647, 0xe0cdc8],
+				[right, 1223, 637, 0xe1cec9],
+				[right, 1221, 667, 0xd9c9c6],
+				[center, 625, 234, 0xd8ced2],
+				[center, 638, 234, 0xded1db],
+				[right, 651, 234, 0xd4ccce],
+				[center, 367, 57, 0xfad09b],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 620, 223, 656, 254, 1000],
+			[center, 1280, 720, 618, 218, 655, 250, 1000],
 		]
 	}, { // 68 剧情内?
 		desc: [1280, 720,
@@ -943,28 +946,29 @@ export class Func691 implements IFuncOrigin {
 	}, { // 72 再次进入剧情_鬼使白
 		desc: [1280, 720,
 			[
-				[right, 868, 262, 0xe4e4df],
-				[right, 864, 238, 0xdccdd3],
-				[right, 876, 238, 0xdccfd1],
-				[right, 890, 238, 0xd7ced3],
-				[right, 876, 209, 0xe7e5dc],
+				[right, 1223, 637, 0xe1cec9],
+				[right, 1221, 667, 0xd9c9c6],
+				[center, 367, 57, 0xfad09b],
+				[right, 843, 234, 0xdeced3],
+				[right, 857, 234, 0xe3d0db],
+				[right, 870, 234, 0xd6ced3],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 861, 225, 893, 252, 1000],
+			[center, 1280, 720, 840, 214, 870, 251, 1000],
 		]
 	}, { // 73 八百比
 		desc: [1280, 720,
 			[
-				[right, 1014, 460, 0xf5f3f4],
-				[right, 1055, 505, 0x74201d],
-				[right, 1046, 564, 0x732021],
-				[right, 977, 579, 0xad2829],
-				[right, 979, 463, 0x21c6d0],
+				[left, 200, 149, 0xffebb6],
+				[left, 199, 255, 0xffebb6],
+				[left, 192, 338, 0xffebb6],
+				[left, 199, 434, 0xffebb6],
+				[left, 188, 548, 0xffebb6],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 453, 318, 526, 396, 1000],
+			[center, 1280, 720, 469, 534, 608, 655, 1000],
 		]
 	}, { // 74 神乐获取
 		desc: [1280, 720,
@@ -983,43 +987,42 @@ export class Func691 implements IFuncOrigin {
 	}, { // 75 再次进入剧情_鬼使黑
 		desc: [1280, 720,
 			[
-				[right, 861, 255, 0xddcdd1],
-				[right, 874, 255, 0xddd0d1],
-				[right, 888, 255, 0xd8cfd3],
-				[right, 862, 229, 0xeae7d4],
-				[right, 887, 277, 0xe5e5d5],
+				[right, 1223, 637, 0xe1cec9],
+				[right, 1221, 667, 0xd9c9c6],
+				[center, 367, 57, 0xfad09b],
+				[right, 841, 250, 0xe0cfd3],
+				[right, 854, 250, 0xdacccb],
+				[right, 867, 250, 0xd9cdcb],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 857, 237, 892, 269, 1000],
+			[center, 1280, 720, 842, 237, 868, 262, 1000],
 		]
 	}, { // 76 青蛙瓷器
 		desc: [1280, 720,
 			[
-				[right, 684, 185, 0xffffff],
-				[right, 722, 292, 0xffffff],
-				[right, 693, 412, 0xffffff],
-				[right, 743, 489, 0xffffff],
-				[right, 979, 252, 0x84b218],
-				[right, 1017, 427, 0x425476],
-				[right, 920, 515, 0xfcfcfc],
+				[left, 183, 129, 0xffebb6],
+				[left, 203, 248, 0xffebb6],
+				[left, 187, 363, 0xffebb6],
+				[left, 207, 485, 0xffebb6],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 465, 297, 559, 385, 1000],
+			[center, 1280, 720, 368, 535, 514, 615, 1000],
 		]
 	}, { // 77 LV.9
 		desc: [1280, 720,
 			[
-				[right, 846, 260, 0xffffff],
-				[right, 860, 259, 0xc6a896],
-				[right, 869, 258, 0xd0b19f],
-				[right, 878, 258, 0xc1a291],
-				[right, 888, 254, 0xd0b19f],
+				[right, 1223, 637, 0xe1cec9],
+				[right, 1221, 667, 0xd9c9c6],
+				[center, 367, 57, 0xfad09b],
+				[right, 838, 254, 0xd0b19f],
+				[right, 858, 253, 0xc0a291],
+				[right, 868, 249, 0xd0b19f],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 249, 327, 285, 356, 1000],
+			[center, 1280, 720, 282, 315, 316, 344, 1000],
 		]
 	}, { // 78 组队未解锁
 		desc: [1280, 720,
@@ -1140,6 +1143,31 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[right, 1280, 720, 1012, 228, 1093, 298, 1000],
 		]
+	}, { // 87 选择签到奖励
+		desc: [1280, 720,
+			[
+				[center, 368, 193, 0x262426],
+				[center, 368, 212, 0xfcf7f2],
+				[center, 363, 238, 0xfcf3e9],
+				[center, 402, 234, 0xbaac98],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 62, 98, 131, 112, 1000],
+		]
+	}, { // 88 点大树
+		desc: [1280, 720,
+			[
+				[left, 255, 216, 0xbbf7cb],
+				[left, 245, 223, 0xe3ffe3],
+				[left, 248, 226, 0xe7ffde],
+				[left, 251, 269, 0xfaf4c3],
+				[left, 250, 276, 0xfbf8cb],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 298, 164, 345, 208, 1000],
+		]
 	},
 	];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
@@ -1231,11 +1259,6 @@ export class Func691 implements IFuncOrigin {
 			})) {
 				return true;
 			}
-			const point = thisScript.findMultiColor('剧情三点');
-			if (point) {
-				thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 1000]])
-				return true;
-			}
 			if (thisScript.oper({
 				id: 691,
 				name: '守护||庭院',
@@ -1256,7 +1279,7 @@ export class Func691 implements IFuncOrigin {
 			}
 			if (thisScript.oper({
 				id: 691,
-				name: '申请',
+				name: '已进入剧情',
 				operator: [thisOperator[82]],
 			})) {
 				thisScript.global.newAccount.create = false;
@@ -1278,7 +1301,7 @@ export class Func691 implements IFuncOrigin {
 				name: 'createNoob',
 				operator: [thisOperator[58], thisOperator[59], thisOperator[60], thisOperator[61]
 					, thisOperator[62], thisOperator[63], thisOperator[64], thisOperator[65]
-					, thisOperator[13], thisOperator[66], thisOperator[67], thisOperator[69]
+					, thisOperator[13], thisOperator[6], thisOperator[66], thisOperator[67], thisOperator[69]
 					, thisOperator[72], thisOperator[35], thisOperator[73], thisOperator[74]
 					, thisOperator[75], thisOperator[76], thisOperator[83]]
 			})) {
@@ -1312,7 +1335,7 @@ export class Func691 implements IFuncOrigin {
 					thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
 					return true;
 				}
-				point = thisScript.findMultiColor('剧情黄眼', null, false, false, false);
+				point = thisScript.findMultiColor('剧情黄眼');
 				if (point) {
 					thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
 					return true;
@@ -1407,7 +1430,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '新手奖励',
-				operator: [thisOperator[38], thisOperator[39], thisOperator[41]]
+				operator: [thisOperator[38], thisOperator[39], thisOperator[41], thisOperator[87]]
 			})) {
 				return true;
 			}
@@ -1450,19 +1473,19 @@ export class Func691 implements IFuncOrigin {
 				sleep(1000);
 				return true;
 			}
-			if (thisScript.oper({
-				name: '庭院判断',
-				operator: [{ desc: thisOperator[31].desc }]
-			})) {
-				const point = thisScript.findMultiColor('庭院_町中竖牌');
-				if (point) {
-					const oper = [
-						[point.x, point.y, point.x + 10, point.y + 10, 1000]
-					];
-					thisScript.regionClick(oper);
-					return true;
-				}
-			}
+			// if (thisScript.oper({
+			// 	name: '庭院判断',
+			// 	operator: [{ desc: thisOperator[31].desc }]
+			// })) {
+			// 	const point = thisScript.findMultiColor('庭院_町中竖牌');
+			// 	if (point) {
+			// 		const oper = [
+			// 			[point.x, point.y, point.x + 10, point.y + 10, 1000]
+			// 		];
+			// 		thisScript.regionClick(oper);
+			// 		return true;
+			// 	}
+			// }
 			if (thisScript.oper({
 				id: 691,
 				name: '残废组队',
@@ -1565,7 +1588,7 @@ export class Func691 implements IFuncOrigin {
 			};
 			return true;
 		}
-		const point = thisScript.findMultiColor('红手指');
+		const point = thisScript.findMultiColor('晴明扇子');
 		if (point) {
 			thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 1000]])
 			return true;
