@@ -1557,5 +1557,8 @@ export const versionList = [{
 }, {
 	version: '20260527_03',
 	desc: '修复：探索找怪界面'
+}, {
+	version: '20260625',
+	desc: '更新内容'
 }];
 export default versionList[versionList.length - 1].version;
