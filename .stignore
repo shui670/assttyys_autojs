@@ -1,5 +1,5 @@
 !/assets/**
 !/dist/**
 !/project.json*
-!app.js
+!config/app.js
 *
