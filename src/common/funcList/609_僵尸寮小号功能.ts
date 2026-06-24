@@ -1688,12 +1688,18 @@ export class Func609 implements IFuncOrigin {
 					return true;
 				}
 			}
-			const point = thisScript.findMultiColor('皮肤广告关闭按钮');
-			if (point) {
-				console.log('识别广告关闭按钮成功');
-				const oper = [[point.x - 10, point.y - 10, point.x, point.y, 1000]];
-				thisScript.regionClick(oper);
-				return true;
+			if (!thisScript.oper({
+				id: 609,
+				name: '登录界面不找关闭按钮',
+				operator: [{ desc: thisOperator[100].desc }]
+			})) {
+				const point = thisScript.findMultiColor('皮肤广告关闭按钮');
+				if (point) {
+					console.log('识别广告关闭按钮成功');
+					const oper = [[point.x - 10, point.y - 10, point.x, point.y, 1000]];
+					thisScript.regionClick(oper);
+					return true;
+				}
 			}
 			if (thisScript.oper({
 				id: 609,

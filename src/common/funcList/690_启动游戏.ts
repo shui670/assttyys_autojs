@@ -719,15 +719,21 @@ export class Func690 implements IFuncOrigin {
 			})) {
 				return true;
 			}
-			//	游戏区域状态不为空
-			if (thisScript.global.game_area) {
-				// 检测是否有皮肤广告
-				const point = thisScript.findMultiColor('皮肤广告关闭按钮');
-				if (point) {
-					console.log('识别广告关闭按钮成功');
-					const oper = [[point.x - 10, point.y - 10, point.x, point.y, 1000]];
-					thisScript.regionClick(oper);
-					return true;
+			if (!thisScript.oper({
+				id: 609,
+				name: '登录界面不找关闭按钮',
+				operator: [{ desc: thisOperator[0].desc }]
+			})) {
+				//	游戏区域状态不为空
+				if (thisScript.global.game_area) {
+					// 检测是否有皮肤广告
+					const point = thisScript.findMultiColor('皮肤广告关闭按钮');
+					if (point) {
+						console.log('识别广告关闭按钮成功');
+						const oper = [[point.x - 10, point.y - 10, point.x, point.y, 1000]];
+						thisScript.regionClick(oper);
+						return true;
+					}
 				}
 			}
 			return false;
