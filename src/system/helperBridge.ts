@@ -57,36 +57,6 @@ export class helperBridge implements IhelperBridge {
 	// [[right, 1280, 720, 1119, 504, 1227, 592, 2000]]
 	regionClickTrans(oper) {
 		for (let i = 0; i < oper.length; i++) {
-			// let regionWidth = null;
-			// let regionHeight = null;
-			// let regionX = null;
-			// let regionY = null;
-
-			// if (oper[i][0] == center) {
-			//     regionWidth = (oper[i][3] - oper[i][1]) * scale;
-			//     regionHeight = (oper[i][4] - oper[i][2]) * scale;
-			//     regionX = screenWidth / 2 + (oper[i][1] - (devWidth / 2)) * scale
-			//     regionY = screenHeight / 2 + (oper[i][2] - (devHeight / 2)) * scale
-			// } else if (oper[i][0] === left) {
-			//     regionWidth = (oper[i][3] - oper[i][1]) * scale;
-			//     regionHeight = (oper[i][4] - oper[i][2]) * scale;
-			//     regionX = oper[i][1] * scale;
-			//     regionY = oper[i][2] * scale;
-			// } else if (oper[i][0] === right) {
-			//     regionWidth = (oper[i][3] - oper[i][1]) * scale;
-			//     regionHeight = (oper[i][4] - oper[i][2]) * scale;
-			//     regionX = screenWidth - ((devWidth - oper[i][1]) * scale);
-			//     regionY = oper[i][2] * scale;
-			// } else if (oper[i][0] === normal) {
-			//     // TODO
-			// }
-			// oper[i] = [
-			//     regionX,
-			//     regionY,
-			//     regionX + regionWidth,
-			//     regionY + regionHeight,
-			//     oper[i][5]
-			// ];
 			if (oper[i][3] === -1) {
 				oper[i] = [-1, -1, -1, -1, ...oper[i].slice(7)]
 			} else {

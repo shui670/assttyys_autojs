@@ -233,7 +233,8 @@ export function getRegionBiasRnd2(region, pointBias, influence) {
 	x = meanX + x * sdX;
 	y = meanY + y * sdY;
 	if (x < region[0] || x > region[2] || y < region[1] || y > region[3]) {
-		return getRegionBiasRnd2(region, pointBias, influence * 2);
+		x = (region[2] + region[0]) / 2 + Math.floor(Math.random() * 7) - 3;
+		y = (region[3] + region[1]) / 2 + Math.floor(Math.random() * 7) - 3;
 	}
 	return [x, y];
 }

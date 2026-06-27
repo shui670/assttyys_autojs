@@ -167,10 +167,13 @@ export class Func609 implements IFuncOrigin {
 				[right, 1183, 365, 0x593824],
 				[right, 1182, 459, 0x593824],
 				[left, 283, 634, 0xd3cbc7],
+				[left, 223, 515, 0x311909],
+				[left, 253, 520, 0x402717],
+				[left, 279, 515, 0x442518],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 248, 490, 253, 495, 1000],
+			[center, 1280, 720, 227, 497, 274, 534, 1000],
 		]
 	}, { // 7 进入阴阳寮
 		desc: '页面是否为庭院_菜单已展开_只支持默认庭院皮肤与默认装饰',
@@ -1545,6 +1548,24 @@ export class Func609 implements IFuncOrigin {
 			[center, 1280, 720, 725, 542, 874, 572, 1000],
 			[center, 1280, 720, 601, 665, 745, 708, 1000],
 		]
+	}, { // 109 无曾用编号的用户中心
+		desc: [1280, 720,
+			[
+				[left, 123, 95, 0xdcac79],
+				[right, 1181, 177, 0xbe6819],
+				[right, 1182, 269, 0x593824],
+				[right, 1183, 365, 0x593824],
+				[right, 1182, 459, 0x593824],
+				[left, 283, 634, 0xd3cbc7],
+				[left, 217, 474, 0x321a0c],
+				[left, 253, 453, 0x452719],
+				[left, 274, 478, 0x47281a],
+				[left, 255, 499, 0x271309],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 228, 455, 273, 500, 1000],
+		]
 	},
 	];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
@@ -2236,7 +2257,7 @@ export class Func609 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 609,
 				name: '打开头像菜单',
-				operator: [thisOperator[5], thisOperator[6]]
+				operator: [thisOperator[5], thisOperator[6], thisOperator[109]]
 			})) {
 				return true;
 			}

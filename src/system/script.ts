@@ -583,7 +583,6 @@ export class Script {
 		for (let i = 0; i < 6; i++) {
 			this.randomclick[i] = Math.floor(Math.random() * 11) - 5;
 		}
-		log(this.randomclick)
 		// test start
 		// let img = images.captureScreen();
 		// img.saveTo('/sdcard/testimg.png');
