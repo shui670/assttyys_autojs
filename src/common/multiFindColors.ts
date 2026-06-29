@@ -969,7 +969,7 @@ const multiFindColors: IMultiFindColorsOrigin = {
 					[left, 91, 283, 0x7f6140],
 					[left, 85, 257, 0x9a8059],
 					[left, 31, 253, 0x8a7251],
-					[left, 28, 334, 0xbbb39d],
+					[left, 63, 332, 0xded7be],
 				]
 			]
 		],
