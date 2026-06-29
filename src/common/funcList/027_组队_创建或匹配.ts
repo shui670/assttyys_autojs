@@ -28,7 +28,7 @@ export class Func027 implements IFuncOrigin {
 				default: '魂土',
 			}
 		],
-	}, { // 关闭buff怎么办
+	}, {
 		desc: '无次数或体力时的操作',
 		config: [
 			{
@@ -297,8 +297,7 @@ export class Func027 implements IFuncOrigin {
 			thisScript.keepScreen();
 			if (curCnt >= maxCount) {
 				thisScript.regionClick([thisOperator[8].oper[0]]);
-				thisScript.superGlobal.next_scheme_name = thisConf.next_scheme as string;
-				thisScript.rerun('关闭BUFF');
+				thisScript.rerun(thisConf.next_scheme);
 				sleep(2000);
 				return true;
 			}

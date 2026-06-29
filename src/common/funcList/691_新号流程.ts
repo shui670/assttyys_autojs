@@ -502,6 +502,7 @@ export class Func691 implements IFuncOrigin {
 		],
 		oper: [
 			[center, 1280, 720, 381, 585, 559, 629, 1000],
+			[center, 1280, 720, 1071, 417, 1096, 446, 1000],
 		]
 	}, { // 36 组队大厅界面
 		desc: '组队大厅',
@@ -525,7 +526,8 @@ export class Func691 implements IFuncOrigin {
 			]
 		],
 		oper: [
-			[center, 1280, 720, 245, 325, 282, 354, 1000],
+			[center, 1280, 720, 311, 327, 345, 361, 1000],
+			// [center, 1280, 720, 245, 325, 282, 354, 1000],
 		]
 	}, { // 39 上阵完成
 		desc: [1280, 720,
@@ -1121,8 +1123,8 @@ export class Func691 implements IFuncOrigin {
 			[
 				[left, 178, 103, 0xb0adb5],
 				[left, 220, 40, 0x8ad3c6],
-				[right, 648, 600, 0x218ebc],
 				[right, 1149, 97, 0x633238],
+				[right, 1151, 132, 0x72313f],
 			]
 		],
 		oper: [
@@ -1158,15 +1160,44 @@ export class Func691 implements IFuncOrigin {
 	}, { // 88 点大树
 		desc: [1280, 720,
 			[
-				[left, 255, 216, 0xbbf7cb],
-				[left, 245, 223, 0xe3ffe3],
-				[left, 248, 226, 0xe7ffde],
-				[left, 251, 269, 0xfaf4c3],
-				[left, 250, 276, 0xfbf8cb],
+				[left, 88, 579, 0x262da0],
+				[center, 416, 581, 0x2d3a9b],
+				[right, 755, 575, 0x223cb8],
+				[right, 1121, 575, 0x27249e],
+				[right, 906, 504, 0x203ec1],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 298, 164, 345, 208, 1000],
+			[center, 1280, 720, 268, 169, 323, 213, 1000],
+		]
+	}, { // 89 庭院换肤
+		desc: [1280, 720,
+			[
+				[center, 618, 268, 0xeae0d1],
+				[center, 603, 344, 0xede3d1],
+				[right, 650, 390, 0xede2d0],
+				[right, 723, 347, 0xede2d0],
+				[right, 649, 309, 0xede1d1],
+				[right, 679, 268, 0xede3d1],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 628, 250, 671, 292, 1000],
+		]
+	}, { // 90 完成换肤
+		desc: [1280, 720,
+			[
+				[left, 236, 352, 0xd3d8fc],
+				[center, 629, 354, 0xfeffff],
+				[center, 632, 567, 0xd9ddff],
+				[left, 239, 562, 0xeff6fd],
+				[right, 665, 354, 0x926637],
+				[right, 1057, 566, 0x8b6033],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 777, 418, 903, 496, 1000],
+			[center, 1280, 720, 978, 620, 1013, 641, 1000],
 		]
 	},
 	];
@@ -1174,13 +1205,13 @@ export class Func691 implements IFuncOrigin {
 		const thisconf = thisScript.scheme.config['691'];
 		if (!thisScript.global.newAccount) {
 			thisScript.global.newAccount = {
-				'create': true,
+				'create': !true,
 				'createNoob': false,
 				'timer': 0,
 				'apply': false,
 				'jingYan': false,
 				'closePB': false, // 关闭皮肤试用
-				'getBird': false,
+				'getBird': !false,
 				'join': false,
 			};
 		}
@@ -1257,6 +1288,11 @@ export class Func691 implements IFuncOrigin {
 				name: '剧情',
 				operator: [thisOperator[19], thisOperator[20]],
 			})) {
+				return true;
+			}
+			const point = thisScript.findMultiColor('剧情三点');
+			if (point) {
+				thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 1000]])
 				return true;
 			}
 			if (thisScript.oper({
@@ -1365,6 +1401,13 @@ export class Func691 implements IFuncOrigin {
 		if (thisScript.global.newAccount.apply) {
 			if (thisScript.oper({
 				id: 691,
+				name: '换庭院',
+				operator: [thisOperator[88], thisOperator[89], thisOperator[90], thisOperator[35],],
+			})) {
+				return true;
+			}
+			if (thisScript.oper({
+				id: 691,
 				name: '申请',
 				operator: [thisOperator[23], thisOperator[86]],
 			})) {
@@ -1449,7 +1492,7 @@ export class Func691 implements IFuncOrigin {
 				id: 691,
 				name: '关闭PB',
 				operator: [thisOperator[45], thisOperator[46], thisOperator[47], thisOperator[48]
-					, thisOperator[35], thisOperator[78], thisOperator[85]]
+					, thisOperator[78], thisOperator[85]]
 			})) {
 				return true;
 			}
@@ -1489,7 +1532,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '残废组队',
-				operator: [thisOperator[32], thisOperator[33], thisOperator[34], thisOperator[35], thisOperator[36]
+				operator: [thisOperator[32], thisOperator[33], thisOperator[34], thisOperator[36]
 					, thisOperator[37], thisOperator[18], thisOperator[55], thisOperator[56]]
 			})) {
 				return true;
