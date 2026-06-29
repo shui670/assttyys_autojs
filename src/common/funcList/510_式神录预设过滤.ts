@@ -12,18 +12,6 @@ export class Func510 implements IFuncOrigin {
 	config = [{
 		desc: '',
 		config: [{
-			name: 'groupName',
-			desc: '预设分组名称',
-			type: 'text',
-			default: '默认分组',
-			value: '默认分组',
-		}, {
-			name: 'defaultName',
-			desc: '预设名称',
-			type: 'text',
-			default: '队伍1',
-			value: '队伍1',
-		}, {
 			name: 'fastMode',
 			desc: '开启快速坐标模式（仅以下参数生效，以损失精准度获取速度）',
 			type: 'switch',

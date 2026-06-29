@@ -2273,6 +2273,8 @@ export class Func609 implements IFuncOrigin {
 				thisScript.global.account_state = 'login';
 				thisScript.runTimes['2'] = 0;
 				thisScript.global.back_time = 0;
+				thisScript.global.change_shikigami_flag = true;
+				thisScript.global.change_shikigami_state = 'flushed';
 				return true;
 			}
 		}
