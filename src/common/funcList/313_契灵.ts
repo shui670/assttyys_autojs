@@ -240,9 +240,9 @@ export class Func313 implements IFuncOrigin {
 			[
 				[left, 43, 39, 0xf7ebad],
 				[left, 281, 42, 0x593716],
-				[right, 1245, 32, 0xd7c3a2],
-				[right, 661, 32, 0xd7c3a2],
 				[left, 153, 584, 0x9c6d36],
+				[right, 663, 31, 0xcdc29c],
+				[right, 1240, 31, 0xcdc29c],
 			]
 		],
 		oper: [
@@ -253,17 +253,32 @@ export class Func313 implements IFuncOrigin {
 			1280, 720,
 			[
 				[center, 570, 562, 0xf3b25e],
-				[center, 571, 590, 0xf3b25e],
 				[right, 708, 564, 0xf3b25e],
-				[right, 709, 588, 0xf3b25e],
 				[right, 784, 469, 0xfddba2],
 				[right, 800, 467, 0x402e2c],
+				[center, 490, 482, 0xffdda4],
 			]
 		],
 		oper: [
 			[center, 1280, 720, 761, 462, 800, 498, 1000],
 			[center, 1280, 720, 560, 556, 715, 598, 1000],
 			[center, 1280, 720, 1042, 176, 1187, 585, 500],
+		]
+	}, { // 16 溢出取消
+		desc: [1280, 720,
+			[
+				[center, 460, 220, 0x684635],
+				[right, 828, 220, 0x624232],
+				[right, 811, 492, 0x684635],
+				[center, 448, 493, 0x664434],
+				[center, 490, 422, 0xdf6851],
+				[right, 789, 425, 0xf3b25e],
+				[right, 659, 331, 0xcbb59c],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 485, 406, 587, 441, 1000],
+			[center, 1280, 720, 1058, 210, 1122, 276, 1000],
 		]
 	},
 	]
@@ -281,7 +296,15 @@ export class Func313 implements IFuncOrigin {
 		if (thisconf.buy_ball && thisScript.global.qiling_ball < 3) {
 			if (thisScript.oper({
 				id: 313,
-				name: '石头购买',
+				name: '盘子购买',
+				operator: [thisOperator[16]]
+			})) {
+				thisScript.global.qiling_ball = 3;
+				return true;
+			}
+			if (thisScript.oper({
+				id: 313,
+				name: '盘子购买',
 				operator: [thisOperator[14]]
 			})) {
 				thisScript.global.qiling_ball++;
@@ -368,7 +391,7 @@ export class Func313 implements IFuncOrigin {
 			name: '契灵弹窗判断契忆',
 			operator: [{ desc: thisOperator[8].desc }]
 		})) {
-			const temp = thisScript.findText('契', 0, thisOperator[8].oper[1], '包含');
+			const temp = thisScript.findText('忆', 0, thisOperator[8].oper[1], '包含');
 			if (temp.length > 0) {
 				thisScript.regionClick([thisOperator[8].oper[2]]);
 				thisScript.rerun('返回庭院');
@@ -400,7 +423,7 @@ export class Func313 implements IFuncOrigin {
 			id: 313,
 			name: '契灵杂项',
 			operator: [thisOperator[0], thisOperator[4], thisOperator[6]
-				, thisOperator[7], thisOperator[10], thisOperator[12]]
+				, thisOperator[7], thisOperator[10], thisOperator[12], thisOperator[15]]
 		})) {
 			return true;
 		}

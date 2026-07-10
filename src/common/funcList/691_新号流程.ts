@@ -526,8 +526,8 @@ export class Func691 implements IFuncOrigin {
 			]
 		],
 		oper: [
-			[center, 1280, 720, 311, 327, 345, 361, 1000],
-			// [center, 1280, 720, 245, 325, 282, 354, 1000],
+			// [center, 1280, 720, 311, 327, 345, 361, 1000],
+			[center, 1280, 720, 245, 325, 282, 354, 1000],
 		]
 	}, { // 39 上阵完成
 		desc: [1280, 720,
@@ -700,7 +700,6 @@ export class Func691 implements IFuncOrigin {
 				[right, 647, 391, 0xb59779],
 				[center, 503, 481, 0xa98d6e],
 				[center, 623, 488, 0xa68a6b],
-				[right, 658, 475, 0xdec39c],
 				[center, 486, 197, 0x4a302d],
 			]
 		],
@@ -1164,27 +1163,13 @@ export class Func691 implements IFuncOrigin {
 				[center, 416, 581, 0x2d3a9b],
 				[right, 755, 575, 0x223cb8],
 				[right, 1121, 575, 0x27249e],
-				[right, 906, 504, 0x203ec1],
 			]
 		],
 		oper: [
 			[center, 1280, 720, 268, 169, 323, 213, 1000],
-		]
-	}, { // 89 庭院换肤
-		desc: [1280, 720,
-			[
-				[center, 618, 268, 0xeae0d1],
-				[center, 603, 344, 0xede3d1],
-				[right, 650, 390, 0xede2d0],
-				[right, 723, 347, 0xede2d0],
-				[right, 649, 309, 0xede1d1],
-				[right, 679, 268, 0xede3d1],
-			]
-		],
-		oper: [
 			[center, 1280, 720, 628, 250, 671, 292, 1000],
 		]
-	}, { // 90 完成换肤
+	},{ // 89 完成换肤
 		desc: [1280, 720,
 			[
 				[left, 236, 352, 0xd3d8fc],
@@ -1205,13 +1190,13 @@ export class Func691 implements IFuncOrigin {
 		const thisconf = thisScript.scheme.config['691'];
 		if (!thisScript.global.newAccount) {
 			thisScript.global.newAccount = {
-				'create': !true,
+				'create': true,
 				'createNoob': false,
 				'timer': 0,
 				'apply': false,
 				'jingYan': false,
 				'closePB': false, // 关闭皮肤试用
-				'getBird': !false,
+				'getBird': false,
 				'join': false,
 			};
 		}
@@ -1402,7 +1387,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '换庭院',
-				operator: [thisOperator[88], thisOperator[89], thisOperator[90], thisOperator[35],],
+				operator: [thisOperator[88], thisOperator[89],thisOperator[35]],
 			})) {
 				return true;
 			}
