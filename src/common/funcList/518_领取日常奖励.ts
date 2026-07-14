@@ -112,16 +112,17 @@ export class Func518 implements IFuncOrigin {
 		}, { // 8 检测_是否有邮件
 			desc: [1280, 720,
 				[
-					[right, 1152, 39, 0xd7b288],
-					[right, 1140, 46, 0xd2ab7f],
-					[right, 1155, 54, 0xcba072],
-					[right, 1225, 35, 0xd4ae84],
-					[right, 1174, 23, 0xfd3e3e],
-				],
+					[right, 1153, 28, 0xd7b289],
+					[right, 1141, 35, 0xd2ac80],
+					[right, 1155, 42, 0xcd9e72],
+					[right, 1168, 34, 0xd7af85],
+					[right, 1217, 25, 0xd3ae84],
+					[right, 1173, 14, 0xf62626],
+				]
 			],
 			oper: [
-				[center, 1280, 720, 1137, 32, 1171, 58, 2000], //  点击邮箱
-			],
+				[center, 1280, 720, 1140, 19, 1171, 50, 1000],
+			]
 		}, { // 9 检测_邮件弹窗_无全部领取
 			desc: [1280, 720,
 				[
