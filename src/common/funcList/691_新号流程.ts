@@ -1117,18 +1117,19 @@ export class Func691 implements IFuncOrigin {
 				[center, 471, 194, 0x2a3943],
 			]
 		],
-	}, { // 85 图鉴御魂切换到外观
+	}, { // 85 图鉴契灵切换到外观
 		desc: [1280, 720,
 			[
-				[left, 178, 103, 0xb0adb5],
-				[left, 220, 40, 0x8ad3c6],
-				[right, 1149, 97, 0x633238],
-				[right, 1151, 132, 0x72313f],
+				[right, 730, 53, 0xb18c58],
+				[right, 952, 73, 0x594b34],
+				[right, 1075, 69, 0x312920],
+				[left, 51, 692, 0xf5d9a7],
+				[left, 117, 653, 0x847459],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 1134, 92, 1172, 132, 1000],
-			[center, 1280, 720, 857, 657, 905, 697, 1000],
+			[center, 1280, 720, 26, 22, 64, 56, 1000],
+			[center, 1280, 720, 861, 651, 905, 691, 1000],
 		]
 	}, { // 86 判断_是否为庭院中的'町中'立牌
 		desc: [1280, 720,
@@ -1169,7 +1170,7 @@ export class Func691 implements IFuncOrigin {
 			[center, 1280, 720, 268, 169, 323, 213, 1000],
 			[center, 1280, 720, 628, 250, 671, 292, 1000],
 		]
-	},{ // 89 完成换肤
+	}, { // 89 完成换肤
 		desc: [1280, 720,
 			[
 				[left, 236, 352, 0xd3d8fc],
@@ -1183,6 +1184,19 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 777, 418, 903, 496, 1000],
 			[center, 1280, 720, 978, 620, 1013, 641, 1000],
+		]
+	}, { // 90 新庭院点守护
+		desc: [1280, 720,
+			[
+				[right, 1138, 345, 0xdfdbcf],
+				[right, 1148, 345, 0xdbd8cd],
+				[right, 1134, 364, 0x4f4b70],
+				[right, 1156, 365, 0x424264],
+				[right, 1146, 382, 0x323043],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 1131, 350, 1158, 380, 1000],
 		]
 	},
 	];
@@ -1387,7 +1401,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '换庭院',
-				operator: [thisOperator[88], thisOperator[89],thisOperator[35]],
+				operator: [thisOperator[35], thisOperator[90]],
 			})) {
 				return true;
 			}
@@ -1548,6 +1562,13 @@ export class Func691 implements IFuncOrigin {
 			}
 		}
 		if (thisScript.global.newAccount.join) {
+			if (thisScript.oper({
+				id: 691,
+				name: '换庭院',
+				operator: [thisOperator[88], thisOperator[89]]
+			})) {
+				return true;
+			}
 			if (thisScript.oper({
 				id: 691,
 				name: '好友加协战',

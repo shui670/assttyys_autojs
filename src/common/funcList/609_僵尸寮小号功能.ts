@@ -1566,6 +1566,20 @@ export class Func609 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 228, 455, 273, 500, 1000],
 		]
+	}, { // 110 印记获得
+		desc: [1280, 720,
+			[
+				[center, 414, 277, 0x82674a],
+				[center, 414, 415, 0x82684c],
+				[right, 866, 264, 0x7d6347],
+				[right, 867, 447, 0x7e6348],
+				[center, 558, 228, 0xe8b961],
+				[right, 731, 236, 0xddab55],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 583, 572, 699, 635, 1000],
+		]
 	},
 	];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
@@ -2282,7 +2296,7 @@ export class Func609 implements IFuncOrigin {
 			id: 609,
 			name: '关闭',
 			operator: [thisOperator[34], thisOperator[35], thisOperator[41], thisOperator[43], thisOperator[66], thisOperator[72], thisOperator[86]
-				, thisOperator[93], thisOperator[96], thisOperator[97]]
+				, thisOperator[93], thisOperator[96], thisOperator[97], thisOperator[110]]
 		})) {
 			return true
 		}

@@ -725,7 +725,6 @@ export class Func692 implements IFuncOrigin {
 				'flower': true,
 				'cheak': false,
 				'five': false,
-				'join': false,
 				'over': false,
 				'finish': false,
 				'clean': false,
@@ -831,25 +830,25 @@ export class Func692 implements IFuncOrigin {
 				return true
 			}
 		}
-		if (thisScript.global.tuDi.over) {
-			if (thisScript.oper({
-				id: 692,
-				name: 'over',
-				operator: [thisOperator[28], thisOperator[29], thisOperator[7], thisOperator[8], thisOperator[30]
-					, thisOperator[31], thisOperator[32]]
-			})) {
-				return true;
-			}
-			if (thisScript.oper({
-				id: 692,
-				name: 'over',
-				operator: [thisOperator[33]]
-			})) {
-				thisScript.global.tuDi.over = false;
-				thisScript.global.tuDi.finish = true;
-				return true;
-			}
-		}
+		// if (thisScript.global.tuDi.over) {
+		// 	if (thisScript.oper({
+		// 		id: 692,
+		// 		name: 'over',
+		// 		operator: [thisOperator[28], thisOperator[29], thisOperator[7], thisOperator[8], thisOperator[30]
+		// 			, thisOperator[31], thisOperator[32]]
+		// 	})) {
+		// 		return true;
+		// 	}
+		// 	if (thisScript.oper({
+		// 		id: 692,
+		// 		name: 'over',
+		// 		operator: [thisOperator[33]]
+		// 	})) {
+		// 		thisScript.global.tuDi.over = false;
+		// 		thisScript.global.tuDi.finish = true;
+		// 		return true;
+		// 	}
+		// }
 		if (thisScript.global.tuDi.finish) {
 			if (thisScript.oper({
 				id: 692,
