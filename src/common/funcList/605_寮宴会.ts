@@ -337,16 +337,16 @@ export class Func605 implements IFuncOrigin {
 	}, { // 25 点击荒川秘闻(右)
 		desc: [1280, 720,
 			[
-				[center, 489, 282, 0x738294],
-				[center, 488, 350, 0x6b7888],
-				[center, 556, 294, 0xe4e1e6],
-				[center, 560, 319, 0xd6d7de],
-				[center, 579, 361, 0xe6e7ee],
-				[center, 639, 295, 0xd6cfc6],
+				[center, 565, 177, 0xe7e7eb],
+				[center, 599, 234, 0xe1e5e9],
+				[center, 516, 233, 0x262330],
+				[center, 581, 165, 0xc3504e],
+				[center, 541, 194, 0xa9a6b0],
+				[center, 509, 201, 0xc8b497],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 522, 289, 782, 352, 1000],
+			[center, 1280, 720, 578, 171, 761, 218, 1000],
 		]
 	}, { // 26 秘闻挑战开启提示
 		desc: '秘闻挑战开启',
