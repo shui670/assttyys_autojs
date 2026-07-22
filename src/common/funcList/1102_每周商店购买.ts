@@ -24,6 +24,11 @@ export class Func1102 implements IFuncOrigin {
 			desc: '秘卷屋买紫蛇皮御魂',
 			type: 'switch',
 			default: true,
+		}, {
+			name: 'miJuanWu_hunHai',
+			desc: '秘卷屋买魂海御魂',
+			type: 'switch',
+			default: true,
 		}]
 	}, {
 		desc: '杂货铺_特殊',
@@ -782,7 +787,48 @@ export class Func1102 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 28, 19, 80, 55, 1000],
 		]
-	}];
+	}, { // 49 魂海兑换
+		desc: [1280, 720,
+			[
+				[right, 928, 231, 0x9c2e26],
+				[right, 928, 357, 0x9c2e26],
+				[right, 1015, 285, 0xbd8e18],
+				[right, 1079, 285, 0xb58d1f],
+				[right, 1107, 496, 0xf5b35f],
+				[right, 1163, 511, 0xf4b25d],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 1108, 493, 1165, 519, 1000],
+		]
+	}, { // 50 魂海兑换_确认
+		desc: [1280, 720,
+			[
+				[center, 520, 76, 0x8b4f1c],
+				[right, 818, 76, 0x9e5721],
+				[center, 496, 468, 0xffdea5],
+				[right, 697, 467, 0xffdea5],
+				[center, 578, 577, 0xf4b25d],
+				[right, 708, 606, 0xf4b25d],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 770, 455, 800, 485, 1000],
+			[center, 1280, 720, 578, 575, 715, 610, 1000],
+		]
+	}, { // 51 魂海已兑完
+		desc: [1280, 720,
+			[
+				[right, 934, 330, 0xf7f2df],
+				[right, 934, 333, 0xf8f2df],
+				[right, 940, 333, 0xf1e5d3],
+				[right, 940, 327, 0xf0e3d1],
+				[right, 1027, 232, 0x9c7921],
+				[right, 1044, 300, 0xffefb5],
+				[right, 1105, 500, 0xf4b25d],
+			]
+		],
+	},];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		const thisConf = thisScript.scheme.config['1102'];
 		thisScript.global.back = true;
@@ -863,7 +909,7 @@ export class Func1102 implements IFuncOrigin {
 		}
 		if (thisScript.global.MT_shop === 'miJuanWu') { // 秘卷屋买御魂
 			if (!thisConf.miJuanWu) {
-				thisScript.global.MT_shop = 'zaHuoPu_teSu';
+				thisScript.global.MT_shop = 'miJuanWu_hunHai';
 				return true;
 			}
 			if (thisScript.oper({
@@ -882,7 +928,7 @@ export class Func1102 implements IFuncOrigin {
 			})) {
 				curCnt++;
 				if (curCnt >= maxCount) {
-					thisScript.global.MT_shop = 'zaHuoPu_teSu';
+					thisScript.global.MT_shop = 'miJuanWu_hunHai';
 					break;
 				}
 				thisScript.keepScreen(false);
@@ -893,7 +939,28 @@ export class Func1102 implements IFuncOrigin {
 				name: '秘卷屋_完成',
 				operator: [thisOperator[9]]
 			})) {
+				thisScript.global.MT_shop = 'miJuanWu_hunHai';
+				return true;
+			}
+		}
+		if (thisScript.global.MT_shop === 'miJuanWu_hunHai') { // 秘卷屋买魂海御魂
+			if (!thisConf.miJuanWu_hunHai) {
 				thisScript.global.MT_shop = 'zaHuoPu_teSu';
+				return true;
+			}
+			if (thisScript.oper({
+				id: 1102,
+				name: '秘卷屋_买御魂',
+				operator: [thisOperator[51]]
+			})) {
+				thisScript.global.MT_shop = 'zaHuoPu_teSu';
+				return true;
+			}
+			if (thisScript.oper({
+				id: 1102,
+				name: '秘卷屋_买御魂',
+				operator: [thisOperator[7], thisOperator[49], thisOperator[50]]
+			})) {
 				return true;
 			}
 		}

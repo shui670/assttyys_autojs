@@ -113,7 +113,7 @@ export type globalRootType = {
 	MT_share_type: 'mumu' | 'phone', // 每周分享_类型
 	MT_liaoShop: 'start' | 'back' | 'end', // 寮商店购买
 	MT_liaoShopList: string[], // 寮商店购买_未购买列表
-	MT_shop: 'zhiBo' | 'jiShouWu' | 'miJuanWu' | 'zaHuoPu_teSu' | 'zaHuoPu_rongYu' | 'zaHuoPu_youQing' | 'zaHuoPu_xunZhang' | 'zaHuoPu_meiLi' | 'done', // 商店购买
+	MT_shop: 'zhiBo' | 'jiShouWu' | 'miJuanWu' | 'miJuanWu_hunHai' | 'zaHuoPu_teSu' | 'zaHuoPu_rongYu' | 'zaHuoPu_youQing' | 'zaHuoPu_xunZhang' | 'zaHuoPu_meiLi' | 'done', // 商店购买
 	zhiBoBack: boolean, // 直播间返回
 	shop_find: string[], // 商店购买_查找物品
 	fengZi: boolean, // 风姿

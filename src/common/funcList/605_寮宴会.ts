@@ -491,12 +491,19 @@ export class Func605 implements IFuncOrigin {
 					}
 					if (curCnt >= maxCount) {
 						thisScript.doPush(thisScript, { text: '开启超时,请查看', before() { thisScript.myToast('脚本即将停止，正在上传数据'); } });
-						thisScript.stop();
+						thisScript.rerun('__关闭应用__');
 						sleep(2000);
 						return false;
 					}
 					sleep(1000);
 					thisScript.keepScreen(false);
+				}
+			} else {
+				if (thisScript.oper({
+					name: '进入寮神社',
+					operator: [thisOperator[8]]
+				})) {
+					return false;
 				}
 			}
 			if (thisScript.oper({
