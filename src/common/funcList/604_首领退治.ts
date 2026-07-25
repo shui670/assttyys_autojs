@@ -18,11 +18,9 @@ export class Func604 implements IFuncOrigin {
 			[
 				[left, 108, 26, 0xd7c5a2],
 				[left, 47, 28, 0xd7c5a2],
-				[right, 1039, 648, 0xd3c3bd],
-				[center, 872, 606, 0x493a38],
-				[center, 727, 611, 0xdfc7ac],
-				[right, 1172, 568, 0xd6bda3],
-				[right, 1217, 662, 0xebc47b],
+				[right, 1007, 612, 0xefeeef],
+				[right, 855, 599, 0x443f58],
+				[right, 751, 615, 0xd34e57],
 			],
 		],
 		oper: [

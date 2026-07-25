@@ -28,6 +28,11 @@ export class Func691 implements IFuncOrigin {
 			desc: '下一个方案',
 			type: 'scheme',
 			default: '师徒_徒弟领体力',
+		}, {
+			name: 'levelUP_scheme',
+			desc: '切换升级方案',
+			type: 'scheme',
+			default: '师徒_徒弟升级',
 		}]
 	}];
 	operator: IFuncOperatorOrigin[] = [{ // 0 选最新区
@@ -445,10 +450,18 @@ export class Func691 implements IFuncOrigin {
 				[center, 357, 629, 0xe5e3e1],
 			]
 		]
-	}, { // 32 进入组队
-		desc: '页面是否为庭院_菜单已展开_只支持默认庭院皮肤与默认装饰',
+	}, { // 32 残废组队
+		desc: [1280, 720,
+			[
+				[center, 353, 643, 0xab5fcd],
+				[center, 367, 630, 0xe7e5e3],
+				[center, 394, 647, 0x7d3fb4],
+				[center, 401, 642, 0xaca09d],
+				[center, 370, 654, 0xbfb6b3],
+			]
+		],
 		oper: [
-			[left, 1280, 720, 427, 619, 486, 683, 1000],
+			[center, 1280, 720, 361, 633, 397, 662, 1000],
 		]
 	}, { // 33 首次战斗
 		desc: [1280, 720,
@@ -505,15 +518,16 @@ export class Func691 implements IFuncOrigin {
 	}, { // 38 新手奖励
 		desc: [1280, 720,
 			[
-				[left, 92, 618, 0x869cc3],
-				[left, 96, 632, 0x7992bf],
-				[left, 122, 626, 0x8da3c7],
-				[left, 124, 642, 0x7a91be],
-				[left, 138, 633, 0xdccfcc],
+				[center, 368, 633, 0xe4e1df],
+				[center, 353, 644, 0xb062d3],
+				[center, 394, 646, 0x7b3db0],
+				[center, 375, 656, 0xb9adaa],
+				[center, 365, 655, 0xbdb3af],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 236, 327, 262, 358, 1000],
+			// [center, 1280, 720, 311, 327, 345, 361, 1000],
+			[center, 1280, 720, 245, 325, 282, 354, 1000],
 		]
 	}, { // 39 上阵完成
 		desc: [1280, 720,
@@ -758,6 +772,7 @@ export class Func691 implements IFuncOrigin {
 		],
 		oper: [
 			[center, 1280, 720, 33, 23, 63, 56, 1000],
+			[center, 1280, 720, 1021, 243, 1086, 290, 1000],
 		]
 	}, { // 58 晴明普攻
 		desc: [1280, 720,
@@ -1144,7 +1159,7 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 62, 98, 131, 112, 1000],
 		]
-	}, { // 88 晴明扇子暗色_点大树
+	}, { // 88 点大树
 		desc: [1280, 720,
 			[
 				[right, 1086, 23, 0xa28567],
@@ -1155,7 +1170,7 @@ export class Func691 implements IFuncOrigin {
 			]
 		],
 		oper: [
-			[center, 1280, 720, 261, 111, 303, 151, 1000],
+			[center, 1280, 720, 272, 199, 311, 233, 1000],
 			[center, 1280, 720, 628, 250, 671, 292, 1000],
 		]
 	}, { // 89 完成换肤
@@ -1186,21 +1201,34 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 624, 189, 657, 222, 1000],
 		]
-	}, { // 91 退出组队大厅界面
-		desc: '组队大厅',
-		oper: [
-			[center, 1280, 720, 33, 24, 67, 55, 1000],
-		]
-	}, { // 92 庭院界面已拜师
+	}, { // 91 缩小场景
 		desc: [1280, 720,
 			[
-				[right, 1069, 382, 0xf6be75],
-				[right, 1085, 396, 0xe9d3a4],
-				[right, 1069, 402, 0xe3cb9b],
-				[right, 1084, 409, 0xe3cc9e],
-				[right, 1097, 401, 0xe5d0a0],
+				[right, 641, 200, 0xe9d3a4],
+				[center, 626, 206, 0xe3cb9b],
+				[right, 641, 214, 0xe3cc9e],
+				[right, 655, 206, 0xe6d1a1],
 			]
 		],
+		oper: [
+			[center, 1280, 720, 213, 508, 248, 549, 1000],
+		]
+	}, { // 92 自动退出式神录
+		desc: [1280, 720,
+			[
+				[center, 542, 350, 0x485be0],
+				[center, 551, 362, 0x4252cf],
+				[center, 540, 364, 0xffffff],
+				[right, 694, 355, 0x402f11],
+				[right, 692, 437, 0xf3b25e],
+				[center, 602, 431, 0xf3b25e],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 588, 417, 702, 451, 1000],
+			[center, 1280, 720, 430, 496, 557, 528, 1000],
+			[center, 1280, 720, 26, 15, 61, 44, 1000],
+		]
 	},
 	];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
@@ -1208,10 +1236,11 @@ export class Func691 implements IFuncOrigin {
 		if (!thisScript.global.newAccount) {
 			thisScript.global.newAccount = {
 				'create': true,
+				'createNoob': false,
 				'timer': 0,
 				'apply': false,
 				'closePB': false, // 关闭皮肤试用
-				'getBird': false,
+				'getBird': !false,
 				'jingYan': false,
 				'join': false,
 			};
@@ -1298,7 +1327,7 @@ export class Func691 implements IFuncOrigin {
 			}
 			if (thisScript.oper({
 				id: 691,
-				name: '守护',
+				name: '守护||庭院',
 				operator: [thisOperator[21]],
 			})) {
 				thisScript.global.newAccount.create = false;
@@ -1307,8 +1336,8 @@ export class Func691 implements IFuncOrigin {
 			}
 			if (thisScript.oper({
 				id: 691,
-				name: '已拜师',
-				operator: [thisOperator[17], thisOperator[92]],
+				name: '申请',
+				operator: [thisOperator[17]],
 			})) {
 				thisScript.global.newAccount.create = false;
 				thisScript.global.newAccount.closePB = true;
@@ -1316,11 +1345,86 @@ export class Func691 implements IFuncOrigin {
 			}
 			if (thisScript.oper({
 				id: 691,
-				name: '新手已完成',
-				operator: [thisOperator[92]],
+				name: '已进入剧情',
+				operator: [thisOperator[82]],
 			})) {
-				thisScript.rerun(thisconf.next_scheme);
-				sleep(1000);
+				thisScript.global.newAccount.create = false;
+				thisScript.global.newAccount.createNoob = true;
+				return true;
+			}
+		}
+		if (thisScript.global.newAccount.createNoob) {
+			if (thisScript.oper({
+				id: 691,
+				name: 'createNoob',
+				operator: [thisOperator[84]]
+			})) {
+				sleep(5000);
+				return true;
+			}
+			if (thisScript.oper({
+				id: 691,
+				name: 'createNoob',
+				operator: [thisOperator[58], thisOperator[59], thisOperator[60], thisOperator[61]
+					, thisOperator[62], thisOperator[63], thisOperator[64], thisOperator[65]
+					, thisOperator[13], thisOperator[6], thisOperator[66], thisOperator[67], thisOperator[69]
+					, thisOperator[72], thisOperator[35], thisOperator[73], thisOperator[74]
+					, thisOperator[75], thisOperator[76], thisOperator[83]]
+			})) {
+				return true;
+			}
+			if (thisScript.oper({
+				id: 691,
+				name: 'createNoob',
+				operator: [thisOperator[77]]
+			})) {
+				thisScript.global.newAccount.createNoob = false;
+				thisScript.global.newAccount.getBird = true;
+				return true;
+			}
+			if (thisScript.oper({
+				id: 691,
+				name: 'createNoob',
+				operator: [thisOperator[68]],
+			}) && !thisScript.oper({
+				id: 691,
+				name: 'createNoob',
+				operator: [thisOperator[71]],
+			})) {
+				let point = thisScript.findMultiColor('剧情三点_普', null, false, false, false);
+				if (point) {
+					thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
+					return true;
+				}
+				point = thisScript.findMultiColor('剧情三点_战', null, false, false, false);
+				if (point) {
+					thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
+					return true;
+				}
+				point = thisScript.findMultiColor('剧情黄眼');
+				if (point) {
+					thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
+					return true;
+				}
+				point = thisScript.findMultiColor('剧情问号', null, false, false, false);
+				if (point) {
+					thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
+					return true;
+				} else {
+					thisScript.global.newAccount.timer = Number(thisScript.global.newAccount.timer) + 1
+					if (thisScript.global.newAccount.timer > 4) {
+						thisScript.global.newAccount.timer = 0;
+						return thisScript.oper({
+							id: 691,
+							name: 'createNoob',
+							operator: [thisOperator[70]],
+						})
+					}
+				}
+			}
+			const point = thisScript.findMultiColor('皮肤广告关闭按钮', null, false, false, false);
+			if (point) {
+				thisScript.regionClick([[point.x, point.y, point.x + 3, point.y + 3, 700]])
 				return true;
 			}
 		}
@@ -1411,7 +1515,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '换皮肤',
-				operator: [thisOperator[35], thisOperator[88], thisOperator[89], thisOperator[91]]
+				operator: [thisOperator[35], thisOperator[88], thisOperator[89], thisOperator[91], thisOperator[92]]
 			})) {
 				return true;
 			}
@@ -1428,7 +1532,7 @@ export class Func691 implements IFuncOrigin {
 				operator: [thisOperator[42]]
 			})) {
 				thisScript.global.newAccount.getBird = false;
-				thisScript.global.newAccount.jingYan = true;
+				thisScript.global.newAccount.closePB = true;
 				return true;
 			}
 			const point = thisScript.findMultiColor('皮肤广告关闭按钮');
@@ -1441,14 +1545,23 @@ export class Func691 implements IFuncOrigin {
 		if (thisScript.global.newAccount.jingYan) {
 			if (thisScript.oper({
 				id: 691,
-				name: '组队经验',
-				operator: [thisOperator[32], thisOperator[33], thisOperator[34], thisOperator[37],
-				thisOperator[18], thisOperator[55], thisOperator[56]]
+				name: '关闭PB',
+				operator: [{ desc: thisOperator[78].desc }]
+			})) {
+				thisScript.rerun(thisconf.levelUP_scheme);
+				sleep(1000);
+				return true;
+			}
+			if (thisScript.oper({
+				id: 691,
+				name: '残废组队',
+				operator: [thisOperator[32], thisOperator[33], thisOperator[34], thisOperator[36]
+					, thisOperator[37], thisOperator[18], thisOperator[55], thisOperator[56]]
 			})) {
 				return true;
 			}
 			let curCnt = 0;
-			const maxCount = 3;
+			const maxCount = 4;
 			while (thisScript.oper({
 				name: '创建队伍',
 				operator: [thisOperator[36]]
@@ -1461,14 +1574,19 @@ export class Func691 implements IFuncOrigin {
 						name: '残废组队',
 						operator: [thisOperator[57]]
 					})) {
-						thisScript.global.newAccount.jingYan = false;
-						thisScript.global.newAccount.join = true;
 						return true;
 					}
 				}
 			}
 		}
 		if (thisScript.global.newAccount.join) {
+			if (thisScript.oper({
+				id: 691,
+				name: '换庭院',
+				operator: [thisOperator[88], thisOperator[89]]
+			})) {
+				return true;
+			}
 			if (thisScript.oper({
 				id: 691,
 				name: '好友加协战',
@@ -1486,12 +1604,55 @@ export class Func691 implements IFuncOrigin {
 				return true;
 			}
 		}
+		// if (thisScript.oper({
+		// 	id: 691,
+		// 	name: '已有珍旅居',
+		// 	operator: [thisOperator[40]]
+		// })) {
+		// 	thisScript.global.newAccount.jingYan = false;
+		// 	thisScript.global.newAccount.join = true;
+		// 	return true;
+		// }
 		if (thisScript.oper({
 			id: 691,
 			name: '杂项',
 			operator: [thisOperator[7], thisOperator[10], thisOperator[16], thisOperator[15]
 				, thisOperator[43], thisOperator[79]]
 		})) {
+			return true;
+		}
+		if (thisScript.oper({
+			id: 691,
+			name: '杂项',
+			operator: [thisOperator[80]]
+		})) {
+			thisScript.global.newAccount = {
+				'create': false,
+				'createNoob': false,
+				'timer': 0,
+				'apply': false,
+				'jingYan': true,
+				'closePB': false, // 关闭皮肤试用
+				'getBird': false,
+				'join': false,
+			};
+			return true;
+		}
+		if (thisScript.oper({
+			id: 691,
+			name: '杂项',
+			operator: [thisOperator[81]]
+		})) {
+			thisScript.global.newAccount = {
+				'create': false,
+				'createNoob': false,
+				'timer': 0,
+				'apply': true,
+				'jingYan': false,
+				'closePB': false, // 关闭皮肤试用
+				'getBird': false,
+				'join': false,
+			};
 			return true;
 		}
 		const point = thisScript.findMultiColor('晴明扇子');
