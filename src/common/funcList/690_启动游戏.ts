@@ -123,7 +123,6 @@ export class Func690 implements IFuncOrigin {
 				[center, 619, 56, 0xe9d29a],
 				[right, 668, 66, 0xe1c182],
 				[right, 724, 54, 0xefd39c],
-				[right, 1085, 111, 0xe7d4ce],
 			]
 		],
 		oper: [
@@ -474,19 +473,19 @@ export class Func690 implements IFuncOrigin {
 			[center, 1280, 720, 606, 378, 665, 434, 1000],
 			[center, 1280, 720, 441, 375, 500, 432, 1000],
 		]
-	}, { // 34 5/27 抵用卷广告
+	}, { // 34 广告
 		desc: [1280, 720,
 			[
-				[right, 734, 543, 0xbd9263],
-				[right, 839, 543, 0xc39563],
-				[right, 726, 577, 0xffe394],
-				[right, 857, 575, 0xffdf95],
-				[right, 870, 555, 0xe7b473],
+				[center, 328, 622, 0xc39664],
+				[center, 430, 644, 0xffcf84],
+				[center, 447, 627, 0xcc9c66],
+				[right, 852, 627, 0xd7a76c],
+				[right, 962, 621, 0xbd8e60],
+				[right, 947, 640, 0xf5c27a],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 725, 542, 874, 572, 1000],
-			[center, 1280, 720, 601, 665, 745, 708, 1000],
+			[center, 1280, 720, 327, 620, 443, 649, 1000],
 		]
 	},
 	];

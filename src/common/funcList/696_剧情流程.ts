@@ -7,9 +7,9 @@ const center = 1;
 const right = 2;
 
 
-export class Func691 implements IFuncOrigin {
-	id = 691;
-	name = '新号流程';
+export class Func696 implements IFuncOrigin {
+	id = 696;
+	name = '剧情流程';
 	desc = '';
 	config = [{
 		desc: '',
@@ -43,7 +43,6 @@ export class Func691 implements IFuncOrigin {
 				[center, 619, 56, 0xe9d29a],
 				[right, 668, 66, 0xe1c182],
 				[right, 724, 54, 0xefd39c],
-				[right, 1085, 111, 0xe7d4ce],
 			]
 		],
 		oper: [

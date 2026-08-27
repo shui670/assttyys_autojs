@@ -1537,16 +1537,14 @@ export class Func609 implements IFuncOrigin {
 	}, { // 108 5/27 抵用卷广告
 		desc: [1280, 720,
 			[
-				[right, 734, 543, 0xbd9263],
-				[right, 839, 543, 0xc39563],
-				[right, 726, 577, 0xffe394],
-				[right, 857, 575, 0xffdf95],
-				[right, 870, 555, 0xe7b473],
+				[right, 1201, 45, 0xdf8ba5],
+				[right, 1197, 57, 0xe9d4d0],
+				[right, 1196, 64, 0xe8d3cf],
+				[right, 1209, 68, 0xe9d3d3],
 			]
 		],
 		oper: [
-			[center, 1280, 720, 725, 542, 874, 572, 1000],
-			[center, 1280, 720, 601, 665, 745, 708, 1000],
+			[center, 1280, 720, 1183, 44, 1219, 75, 1000],
 		]
 	}, { // 109 无曾用编号的用户中心
 		desc: [1280, 720,
@@ -1579,6 +1577,20 @@ export class Func609 implements IFuncOrigin {
 		],
 		oper: [
 			[center, 1280, 720, 583, 572, 699, 635, 1000],
+		]
+	},  { // 111 广告
+		desc: [1280, 720,
+			[
+				[center, 328, 622, 0xc39664],
+				[center, 430, 644, 0xffcf84],
+				[center, 447, 627, 0xcc9c66],
+				[right, 852, 627, 0xd7a76c],
+				[right, 962, 621, 0xbd8e60],
+				[right, 947, 640, 0xf5c27a],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 327, 620, 443, 649, 1000],
 		]
 	},
 	];
@@ -1723,6 +1735,13 @@ export class Func609 implements IFuncOrigin {
 					return true;
 				}
 			}
+			if (thisScript.oper({
+				id: 609,
+				name: '点击登录',
+				operator: [thisOperator[100], thisOperator[101], thisOperator[108]]
+			})) {
+				return true
+			}
 			if (!thisScript.oper({
 				id: 609,
 				name: '登录界面不找关闭按钮',
@@ -1735,13 +1754,6 @@ export class Func609 implements IFuncOrigin {
 					thisScript.regionClick(oper);
 					return true;
 				}
-			}
-			if (thisScript.oper({
-				id: 609,
-				name: '点击登录',
-				operator: [thisOperator[100], thisOperator[101], thisOperator[108]]
-			})) {
-				return true
 			}
 		}
 		if (thisScript.global.account_state === 'function') {
@@ -2296,7 +2308,7 @@ export class Func609 implements IFuncOrigin {
 			id: 609,
 			name: '关闭',
 			operator: [thisOperator[34], thisOperator[35], thisOperator[41], thisOperator[43], thisOperator[66], thisOperator[72], thisOperator[86]
-				, thisOperator[93], thisOperator[96], thisOperator[97], thisOperator[110]]
+				, thisOperator[93], thisOperator[96], thisOperator[97], thisOperator[110], thisOperator[111]]
 		})) {
 			return true
 		}

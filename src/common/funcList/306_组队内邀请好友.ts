@@ -132,7 +132,6 @@ export class Func306 implements IFuncOrigin {
 				[center, 465, 115, 0x9a644a],
 				[center, 573, 112, 0x8f5a43],
 				[center, 688, 116, 0x925d45],
-				[center, 793, 106, 0xa48e79],
 			]
 		],
 		oper: [

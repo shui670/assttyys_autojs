@@ -162,6 +162,7 @@ export class YunxiOcr implements IOcr {
 			} else if (new Date().getTime() - startTime > timeout) {
 				return [];
 			}
+			sleep(200);
 		}
 	}
 

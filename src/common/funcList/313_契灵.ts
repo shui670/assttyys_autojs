@@ -67,12 +67,12 @@ export class Func313 implements IFuncOrigin {
 	}, { // 3 选择契灵
 		desc: [1280, 720,
 			[
-				[left, 54, 30, 0xefd390],
-				[left, 44, 40, 0xf5e6a6],
-				[left, 56, 50, 0xf0d591],
 				[left, 77, 638, 0xf4f4cf],
 				[left, 186, 659, 0xf9eedb],
 				[left, 293, 627, 0xf1efc5],
+				[left, 47, 25, 0xefd48e],
+				[left, 45, 47, 0xefd48f],
+				[left, 114, 27, 0xf9edb7],
 			]
 		],
 		oper: [
@@ -238,11 +238,12 @@ export class Func313 implements IFuncOrigin {
 	}, { // 14 购买初级契灵球
 		desc: [1280, 720,
 			[
-				[left, 43, 39, 0xf7ebad],
-				[left, 281, 42, 0x593716],
 				[left, 153, 584, 0x9c6d36],
 				[right, 663, 31, 0xcdc29c],
 				[right, 1240, 31, 0xcdc29c],
+				[left, 34, 36, 0xf7e9ab],
+				[left, 115, 29, 0xf9eeb7],
+				[left, 311, 26, 0xcbc597],
 			]
 		],
 		oper: [

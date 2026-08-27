@@ -663,7 +663,8 @@ export class Func518 implements IFuncOrigin {
 		if (thisScript.oper({
 			id: 518,
 			name: '杂项',
-			operator: [thisOperator[0], thisOperator[16], thisOperator[24], thisOperator[41], thisOperator[45]]
+			operator: [thisOperator[0], thisOperator[16], thisOperator[24], thisOperator[41]
+				, thisOperator[45], thisOperator[49]]
 		})) {
 			return true;
 		}
@@ -671,7 +672,7 @@ export class Func518 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 518,
 				name: '邮件',
-				operator: [thisOperator[12], thisOperator[13], thisOperator[14], thisOperator[49]]
+				operator: [thisOperator[12], thisOperator[13], thisOperator[14]]
 			})) {
 				return true;
 			}

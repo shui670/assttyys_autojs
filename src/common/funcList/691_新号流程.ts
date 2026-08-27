@@ -44,7 +44,7 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 226, 212, 375, 252, 1000], // 全平台
 			[center, 1280, 720, 502, 133, 1056, 622, 1000], // ocr昵称区域
-			[center, 1280, 720, 434, 142, 603, 198, 1000], // 选区
+			[center, 1280, 720, 491, 554, 553, 577, 1000], // 选区
 			[center, 1280, 720, 562, 574, 722, 617, 1200], // 点击开始游戏
 		],
 	}, { // 1 点击输入
@@ -1191,17 +1191,31 @@ export class Func691 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 33, 24, 67, 55, 1000],
 		]
-	}, { // 92 庭院界面已拜师
+	}, { // 92 庭院界面已拜师,用切换到旧庭院判断
 		desc: [1280, 720,
 			[
-				[right, 1069, 382, 0xf6be75],
-				[right, 1085, 396, 0xe9d3a4],
-				[right, 1069, 402, 0xe3cb9b],
-				[right, 1084, 409, 0xe3cc9e],
-				[right, 1097, 401, 0xe5d0a0],
+				[right, 714, 252, 0xaaa29a],
+				[right, 736, 245, 0xbaafaf],
+				[right, 738, 257, 0xb5aeb9],
+				[right, 739, 325, 0x989594],
+				[right, 739, 355, 0x9b9594],
+
 			]
 		],
-	},
+	},{ // 93 拜师完毕后再次进入刷新界面位置
+	desc: [1280, 720,
+		[
+			[right, 640, 201, 0xe9d3a4],
+			[center, 626, 206, 0xe3cb9b],
+			[right, 640, 214, 0xe3cc9e],
+			[right, 655, 206, 0xe6d1a1],
+			[center, 626, 187, 0xf7be74],
+		]
+	],
+	oper: [
+		[center, 1280, 720, 621, 191, 658, 219, 1000],
+	]
+},
 	];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		const thisconf = thisScript.scheme.config['691'];
@@ -1298,7 +1312,7 @@ export class Func691 implements IFuncOrigin {
 			}
 			if (thisScript.oper({
 				id: 691,
-				name: '守护',
+				name: '跳过新手教程',
 				operator: [thisOperator[21]],
 			})) {
 				thisScript.global.newAccount.create = false;
@@ -1308,7 +1322,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '已拜师',
-				operator: [thisOperator[17], thisOperator[92]],
+				operator: [thisOperator[17]],
 			})) {
 				thisScript.global.newAccount.create = false;
 				thisScript.global.newAccount.closePB = true;
@@ -1411,7 +1425,7 @@ export class Func691 implements IFuncOrigin {
 			if (thisScript.oper({
 				id: 691,
 				name: '换皮肤',
-				operator: [thisOperator[35], thisOperator[88], thisOperator[89], thisOperator[91]]
+				operator: [thisOperator[29],thisOperator[93],thisOperator[35], thisOperator[88], thisOperator[89], thisOperator[91]]
 			})) {
 				return true;
 			}

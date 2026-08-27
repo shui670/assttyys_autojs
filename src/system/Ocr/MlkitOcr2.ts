@@ -64,7 +64,7 @@ class MlkitOcr2 implements IOcr {
      * 安装
      */
 	install(option: { failCallback: Function, successCallback: Function }): void {
-		if (app.autojs.versionCode < '9121400') {
+		if (app.autojs.versionCode < 9121400) {
 			toastLog('软件版本过低，当前版本不支持ocr请安装新版');
 			option.failCallback();
 			return;
@@ -127,6 +127,7 @@ class MlkitOcr2 implements IOcr {
 			} else if (new Date().getTime() - startTime > timeout) {
 				return [];
 			}
+			sleep(200);
 		}
 	}
 

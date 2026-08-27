@@ -43,19 +43,42 @@ export class Func312 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 1065, 252, 1151, 425, 1000],
 		]
-	}, { // 2 界面识别(测试中)
-		desc: [
-			1280, 720,
+	}, {
+		desc: [1280, 720,
 			[
-				[right, 1245, 22, 0x654339],
-				[right, 1244, 58, 0x5b433a],
-				[right, 1240, 58, 0x6a4b3f],
-				[right, 1240, 22, 0x6a473b],
+				[right, 1141, 585, 0xe3d9c2],
+				[right, 1148, 656, 0xe2d8c1],
+				[right, 1100, 624, 0xe0d4bf],
+				[right, 1151, 620, 0xe4dac3],
+				[right, 1178, 615, 0xe1d6c0],
 			]
 		],
-	}];
+		oper: [
+			[center, 1280, 720, 1093, 591, 1191, 661, 1000],
+		]
+	}, {
+		desc: [1280, 720,
+			[
+				[right, 1095, 539, 0x503327],
+				[right, 1140, 573, 0xe3d9c2],
+				[right, 1179, 575, 0xe7dbc6],
+				[right, 1185, 539, 0x603f2f],
+				[right, 1142, 618, 0xe4dbc3],
+				[right, 1105, 569, 0xe6dbc5],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 1102, 539, 1175, 607, 1000],
+		]
+	},];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
 		const thisConf = thisScript.scheme.config['312'];
+		if (thisScript.oper({
+			id: 312,
+			operator: [thisOperator[2],thisOperator[3]]
+		})) {
+			return;
+		}
 		let curCnt = 0;
 		const maxCount = 5;
 		while ((thisScript.findMultiColor('活动说明的感叹号') || thisScript.findMultiColor('体力图标') ||

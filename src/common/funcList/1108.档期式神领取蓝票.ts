@@ -207,6 +207,19 @@ export class Func1108 implements IFuncOrigin {
 		oper: [
 			[center, 1280, 720, 30, 22, 70, 53, 1000],
 		]
+	}, { // 16 旭华阶段
+		desc: [1280, 720,
+			[
+				[left, 138, 144, 0xd97242],
+				[left, 120, 170, 0xf7c063],
+				[left, 129, 189, 0xa56d31],
+				[left, 150, 154, 0xe68b47],
+				[left, 140, 171, 0xf2edd0],
+			]
+		],
+		oper: [
+			[center, 1280, 720, 200, 241, 333, 330, 1000],
+		]
 	},
 	];
 	operatorFunc(thisScript: Script, thisOperator: IFuncOperator[]): boolean {
@@ -237,7 +250,7 @@ export class Func1108 implements IFuncOrigin {
 				id: 518,
 				name: '检测_祈愿福礼',
 				operator: [thisOperator[9], thisOperator[10], thisOperator[11], thisOperator[12]
-					, thisOperator[13], thisOperator[14], thisOperator[15]]
+					, thisOperator[13], thisOperator[14], thisOperator[15], thisOperator[16]]
 			})) {
 				return true;
 			}
