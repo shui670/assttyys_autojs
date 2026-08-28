@@ -26,13 +26,9 @@ core({
 // console.log(context.getExternalFilesDir(null).getAbsolutePath());
 // console.log(files.cwd());
 console.log(`autojs version: ${app.autojs.versionCode}`);
-
-let url = '' // https://assttyys.zzliux.cn/static/webview/
+// 说明:url读取服务器webiew数据
+let url = 'file://' + files.path('dist/index.html'); // https://assttyys.zzliux.cn/static/webview/
 // 调试模式，可能存在有人用run.js运行脚本，这时就得用运行路径判断了
-// if (context.packageName.match(/^org.autojs.autojs(pro)?$/) && files.cwd().indexOf(context.getExternalFilesDir(null).getAbsolutePath()) === -1) {
-// 	url = 'file://' + files.path('dist/index.html');
-// }
-// aj彻底废了。。
 if (isDebugPlayerRunning()) {
 	url = 'file://' + files.path('dist/index.html');// file://' + files.path('dist/index.html)
 	// url = 'https://assttyys.zzliux.cn/new/'

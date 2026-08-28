@@ -88,22 +88,14 @@ module.exports = (env, argv) => {
             new CleanWebpackPlugin({
                 cleanOnceBeforeBuildPatterns: [__dirname + '/../dist/auto.js'],
             }),
-            // new JavascriptObfuscator({
-            //     compact: true,
-            //     identifierNamesGenerator: "dictionary",
-            //     identifiersDictionary: dictionary,
-            //     target: "node",
-            //     transformObjectKeys: false,
-            //     stringArray: true,
-            //     stringArrayEncoding: ['rc4'],
-            // }),
             compilePlugin,
             new ProgressPlugin(),
-            new CopyWebpackPlugin({
-                patterns: [
-                    { from: path.resolve(__dirname, '../node_modules/assttyys_ui/dist/index.html'), to: '.' },
-                ]
-            }),
+            // 说明:读取assttyys_ui的npm包后覆盖到本地,让调试模式使用此版本
+            // new CopyWebpackPlugin({
+            //     patterns: [
+            //         { from: path.resolve(__dirname, '../node_modules/assttyys_ui/dist/index.html'), to: '.' },
+            //     ]
+            // }),
         ]
     }
 
